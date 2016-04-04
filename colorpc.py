@@ -194,7 +194,8 @@ def inst_is_ret(pc):
         for x in lst:
                 if x == i: return True;            
         if "ARM" in get_proc_name():
-                #ok instead of understaind all specflags and vals for ARM, I'll use ins mnemonic...
+                #ok instead of understanding all specflags and vals for ARM in cmd.Operands
+                #I'll use ins mnemonic...
                 mne = idc.GetDisasm(pc);
                 if idaapi.cmd.itype == idaapi.ARM_pop:
                         if "PC" in mne: return True;
